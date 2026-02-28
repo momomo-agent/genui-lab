@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenUI Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <div class="header-left">
+        <h1 class="logo">GenUI Lab</h1>
+        <span class="badge-beta">Research</span>
+      </div>
+      <div class="header-right">
+        <div class="theme-switcher" id="themeSwitcher">
+          <button class="theme-btn active" data-theme="glass">Glass</button>
+          <button class="theme-btn" data-theme="neo">Neo</button>
+          <button class="theme-btn" data-theme="terminal">Terminal</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div id="welcome" class="welcome">
+        <h2>输入意图，LLM 实时生成 UI</h2>
+        <p class="subtitle">试试下面的例子，或输入任意描述</p>
+        <div class="examples" id="examples"></div>
+      </div>
+      <div id="messages" class="messages"></div>
+    </main>
+
+    <footer id="footer">
+      <form id="form" class="input-bar">
+        <input type="text" id="input" placeholder="描述你想要的界面..." autocomplete="off">
+        <button type="submit" id="sendBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
